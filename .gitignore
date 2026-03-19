@@ -1,0 +1,7 @@
+# Données Prometheus et Grafana (volumes Docker)
+prometheus_data/
+grafana_data/
+
+# Fichiers système
+.DS_Store
+*.log

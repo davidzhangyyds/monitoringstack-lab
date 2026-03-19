@@ -1,0 +1,14 @@
+global:
+  resolve_timeout: 5m          # Délai avant de considérer une alerte résolue
+
+route:
+  group_by: ['alertname']      # Regroupe les alertes par nom
+  group_wait: 30s              # Attend 30s avant d'envoyer le premier groupe
+  group_interval: 5m           # Intervalle entre deux groupes d'alertes
+  repeat_interval: 1h          # Répète l'alerte toutes les heures si non résolue
+  receiver: 'webhook-test'     # Récepteur par défaut
+
+receivers:
+  - name: 'webhook-test'
+    webhook_configs:
+      - url: 'http://webhook-logger:5001/webhook'  # On va créer ce logger juste après
