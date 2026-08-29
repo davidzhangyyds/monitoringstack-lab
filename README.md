@@ -1,5 +1,6 @@
 # Stack de Monitoring — Prometheus + Grafana + Alertmanager
 
+Projet qui a pour objectif de comprendre les technologies permettant l'observabilité.
 Stack de monitoring conteneurisé déployé sur VM Ubuntu Server via Docker Compose.
 
 ## Architecture
